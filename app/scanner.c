@@ -54,7 +54,7 @@ static void _on_disc(uint8_t type,
     pos += fmt_u32_dec(&tmp[pos], (uint32_t)type);
     tmp[pos++] = ';';
     pos += fmt_u32_dec(&tmp[pos], (uint32_t)addr->type);
-    tmp[pos++] = '-';
+    tmp[pos++] = ';';
     bluetil_addr_sprint(&tmp[pos], addr->val);
     pos += BLUETIL_ADDR_STRLEN - 1;
     tmp[pos++] = ';';
